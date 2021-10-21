@@ -1,0 +1,90 @@
+<div class="container" >
+  <div class="row mt-5 mb-5" >
+      <div class="col-md-4" >
+        <div class="card">
+          <img src="https://cdn.pixabay.com/photo/2019/11/21/14/46/bread-4642686_960_720.jpg" class="card-img-top" alt="Pão Caseiro">
+          <div class="card-body">
+            <h5 class="card-title ">Pão Caseiro</h5>
+            <p class="card-text">Pão caseiro fofinho sem precisar sovar a massa.</p>                
+
+            
+          </div>
+        </div>
+      </div>   
+
+      <div class="col-md-8">
+        <div class="recepi">
+          <h3 class="text-center mb-4">Pão Caseiro</h3>
+          <h5 class="mt-4 mb-4">Ingredientes</h5>
+          <ul>
+            <li>
+              1 1/2 de farinha de trigo</li>
+              <li> 2 pacotes de fermento seco</li>
+              <li> 250 ml de leite</li>
+              <li> 250 ml de água</li>
+              <li> 3 ovos</li>
+              <li> 125 ml de óleo</li>
+              <li> 1 colher de sopa de sal</li>
+              <li> 1/2 xícara de açúcar</li>           
+                       
+          </ul>
+          <h5 class="mt-4 mb-10">Modo de Preparo</h5>
+          <p>Misture o leite com a água e aqueça-os, não deixe ferver.<br /><br />
+
+            ​	Em uma tigela, misture 1 kg de farinha, o fermento, o sal e o açúcar. No centro, adicione 2 ovos e o óleo e misture. Adicione aos poucos o leite e a água mornos  e misture formando uma massa grudenta. Adicione o restante da farinha até a massa desgrudar das mãos, não precisa sovar a massa.<br /><br />
+            
+            ​	Divida a massa em 3 partes iguais. Abra a massa formando um retângulo e enrole para formar o pão.<br /><br />
+            
+            ​	Coloque-os em uma forma untada e deixe crescer até dobrar de tamanho. Misture 1 ovo com 2 colheres de leite e pincele sobre os pães.<br /><br />
+            
+            ​	Asse por aproximadamente 30 minutos.</p>
+        </div>
+
+        <hr class="mt-5 mb-5">
+
+        <div>
+          <h3 class="text-center mb-4 ">Comentários:</h3>
+  
+          <div class="form-group mb-4">
+            <label for="nome" class="text-monospace">Nome:</label>
+            <input type="text" id="nome" name="nome" class="form-control mt-4" placeholder="Digite seu nome" [(ngModel)]="post.name">
+            
+          </div>
+          <div class="form-group">
+            <label for="mensagem" class="text-monospace">Mensagem:</label>
+            <textarea  id="mensagem" name="mensagem" cols="30" rows="4"  class="form-control mt-4" placeholder="Digite sua mensagem" [(ngModel)]="post.message"></textarea>
+            
+          </div>
+          <div class="d-flex justify-content-end mt-4">
+            <button type="button" class="btn btn-outline-info w-25" (click)='cadastrarMessage()'>Publicar</button>
+          </div>
+  
+        </div>
+        
+        <hr class="mt-5 mb-5">
+
+        <h6 class="mt-5 text-monospace">Pesquisar comentário</h6>
+
+        <input type="text"  [(ngModel)]="idBuscado" class="form-control mb-3 w-50">
+        <button class="btn btn-outline-warning"  (click)="buscarId()">Pesquisar</button>
+        <ul *ngIf="posts != null">
+          <li>{{posts.name}}</li>
+          <li>{{posts.message}}</li>
+        </ul>
+         
+        <div class="container" class="mt-5 mb-5">
+          <div class="card mb-4" *ngFor="let post of listPost">
+            <div class="card-header">
+              <h6 class="card-title">{{post.id}}. {{post.name}}</h6>
+            </div>
+            <div class="card-body">
+              <p class="card-text">{{post.message}}</p>
+            </div>
+  
+          </div>
+        </div>
+      </div> 
+  </div>
+</div>
+
+

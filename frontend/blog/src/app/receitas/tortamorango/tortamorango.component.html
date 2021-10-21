@@ -1,0 +1,80 @@
+<div class="container" >
+    <div class="row mt-5 mb-5" >
+        <div class="col-md-4" >
+          <div class="card">
+            <img src="https://media.istockphoto.com/photos/tart-with-strawberries-and-whipped-cream-decorated-with-mint-leaves-picture-id478458806?k=20&m=478458806&s=612x612&w=0&h=D8vE5CtFmkoTzxv1uxvjsrjGpjDfmeKMU-T7akq2uBw=" class="card-img-top" alt="Torta de Morango">
+            <div class="card-body">
+              <h5 class="card-title ">Torta de Morango</h5>
+              <p class="card-text">Torta deliciosa e fácilde fazer.</p>                
+  
+              
+            </div>
+          </div>
+        </div>   
+  
+        <div class="col-md-8">
+          <div class="recepi">
+            <h3 class="text-center mb-4">Torta de Morango</h3>
+            <h5 class="mt-4 mb-4">Ingredientes para a massa</h5>
+            <ul>
+              <li>3 xícaras de farinha de trigo</li>
+                <li> 1 1/2 xícaras de açúcar</li>
+                <li> 2 ovos</li>
+                <li> 3 colheres de sopa bem cheias de manteiga ou margarina</li>
+                <li> 1 colher de sopa de fermento em pó</li>
+                       
+                         
+            </ul>
+            <h5 class="mt-4 mb-4">Ingredientes para o recheio</h5>
+            <ul>
+              <li> 2 caixas de morangos picados</li>
+                <li>Açúcar</li>
+                         
+                         
+            </ul>
+            <h5 class="mt-4 mb-10">Modo de Preparo</h5>
+            <p>Misture todos os ingredientes da massa até ela desgrudar da mão. Cubra o fundo da assadeira e suba a massa nas laterais formando uma borda. Cubra toda a massa com os morangos picados e polvilhe por cima um pouco de açúcar.<br /><br />
+  
+              ​	Asse à 180 °C por 30 minutos.<br /><br />
+                            ​	
+          </div>
+  
+          <hr class="mt-5 mb-5">
+  
+          <div>
+            <h3 class="text-center mb-4 ">Comentários:</h3>
+    
+            <div class="form-group mb-4">
+              <label for="nome" class="text-monospace">Nome:</label>
+              <input type="text" id="nome" name="nome" class="form-control mt-4" placeholder="Digite seu nome" [(ngModel)]="post.name">
+              
+            </div>
+            <div class="form-group">
+              <label for="mensagem" class="text-monospace">Mensagem:</label>
+              <textarea  id="mensagem" name="mensagem" cols="30" rows="4"  class="form-control mt-4" placeholder="Digite sua mensagem" [(ngModel)]="post.message"></textarea>
+              
+            </div>
+            <div class="d-flex justify-content-end mt-4">
+              <button type="button" class="btn btn-outline-info w-25" (click)='cadastrarMessage()'>Publicar</button>
+            </div>
+    
+          </div>
+          
+          <hr class="mt-5 mb-5">
+  
+          <h6 class="mt-5 text-monospace">Pesquisar comentário</h6>
+  
+          <input type="text"  [(ngModel)]="idBuscado" class="form-control mb-3 w-50">
+          <button class="btn btn-outline-warning"  (click)="buscarId()">Pesquisar</button>
+          <ul *ngIf="posts != null">
+            <li>{{posts.name}}</li>
+            <li>{{posts.message}}</li>
+          </ul>
+           
+         
+        </div> 
+    </div>
+  </div>
+  
+  
+  

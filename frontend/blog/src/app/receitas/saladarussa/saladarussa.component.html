@@ -1,0 +1,73 @@
+<div class="container" >
+    <div class="row mt-5 mb-5" >
+        <div class="col-md-4" >
+          <div class="card">
+            <img src="https://images.freeimages.com/images/premium/previews/1088/10889357-vegetable-salad.jpg" class="card-img-top" alt="Salada Russa">
+            <div class="card-body">
+              <h5 class="card-title ">Salada Russa</h5>
+              <p class="card-text">Salada simples, fácil e muito refrescante..</p>                
+  
+              
+            </div>
+          </div>
+        </div>   
+  
+        <div class="col-md-8">
+          <div class="recepi">
+            <h3 class="text-center mb-4">Salada Russa</h3>
+            <h5 class="mt-4 mb-4">Ingredientes</h5>
+            <ul>
+              <li>1 pedaço com 2 cm de espessura de peito de peru</li>
+                <li> 1 lata de abacaxi em caldas</li>
+                <li> 2 latas de milho verde</li>
+                <li> 3 maçãs verdes</li>
+                <li> Nozes picadas</li>
+                <li> Passas pretas</li>
+                <li> 1 caixa de creme de leite</li>
+                <li> 3 colheres de sopa cheias de Maionese</li>  
+                <li> Sal à gosto</li> 
+                <li> Pimenta do reino à gosto</li>          
+                         
+            </ul>
+            <h5 class="mt-4 mb-10">Modo de Preparo</h5>
+            <p>Pique em quadradinhos pequenos e misture todos os ingredientes. Acrescente o creme de leite e a maionese até cobrir tudo. Tempere à gosto com sal e pimenta do reino. Coloque para gelar.</p>                ​
+          </div>
+  
+          <hr class="mt-5 mb-5">
+  
+          <div>
+            <h3 class="text-center mb-4 ">Comentários:</h3>
+    
+            <div class="form-group mb-4">
+              <label for="nome" class="text-monospace">Nome:</label>
+              <input type="text" id="nome" name="nome" class="form-control mt-4" placeholder="Digite seu nome" [(ngModel)]="post.name">
+              
+            </div>
+            <div class="form-group">
+              <label for="mensagem" class="text-monospace">Mensagem:</label>
+              <textarea  id="mensagem" name="mensagem" cols="30" rows="4"  class="form-control mt-4" placeholder="Digite sua mensagem" [(ngModel)]="post.message"></textarea>
+              
+            </div>
+            <div class="d-flex justify-content-end mt-4">
+              <button type="button" class="btn btn-outline-info w-25" (click)='cadastrarMessage()'>Publicar</button>
+            </div>
+    
+          </div>
+          
+          <hr class="mt-5 mb-5">
+  
+          <h6 class="mt-5 text-monospace">Pesquisar comentário</h6>
+  
+          <input type="text"  [(ngModel)]="idBuscado" class="form-control mb-3 w-50">
+          <button class="btn btn-outline-warning"  (click)="buscarId()">Pesquisar</button>
+          <ul *ngIf="posts != null">
+            <li>{{posts.name}}</li>
+            <li>{{posts.message}}</li>
+          </ul>
+                     
+        </div> 
+    </div>
+  </div>
+  
+  
+  

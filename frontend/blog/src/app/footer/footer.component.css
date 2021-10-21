@@ -1,0 +1,44 @@
+
+.social-network{
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social-network > li{
+    display: inline;
+    padding: 5px;
+    margin:0;
+    font-size: 35px;
+  }
+  
+ /*  .icoFacebook, .icoInstagram, .icoLinkedin{
+    color: white;
+  } */
+
+  .icoGithub{
+    color: black;
+  }
+  
+  .icoInstagram{
+    color: #a11d68;
+  }
+  
+  .icoLinkedin{
+    color: #035c8b;
+  }
+  
+  .icoGithub:hover{
+        opacity: 0.6;
+  }
+  
+  .icoInstagram:hover{
+    opacity: 0.6;
+  }
+  
+  .icoLinkedin:hover{
+    opacity: 0.6;
+  }
+
+  .footer-copyright{
+      color: black
+  }
