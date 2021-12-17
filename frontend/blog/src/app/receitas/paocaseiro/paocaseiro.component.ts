@@ -29,21 +29,23 @@ export class PaocaseiroComponent implements OnInit  {
   }
 
   findPosts() {
-    this.postService.getPosts().subscribe((data: Post[]) => {
+    this.postService.getPostsPaoCaseiro().subscribe((data: Post[]) => {
       this.listPost = data;
     })
   }
 
   cadastrarMessage(){
-    this.postService.postMessage(this.post).subscribe((data: Post) => {
+    this.postService.postMessagePaoCaseiro(this.post).subscribe((data: Post) => {
       this.post = data;
       location.assign('/paocaseiro');
     })
   }
 
-  buscarId(){
-    this.postService.buscarId(this.idBuscado).subscribe(objetos => this.posts = objetos);
+  buscarIdPaoCaseiro(){
+    this.postService.buscarIdPaoCaseiro(this.idBuscado).subscribe(objetos => this.posts = objetos);
   }
+
+  
  
   
 }

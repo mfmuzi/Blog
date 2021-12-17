@@ -1,0 +1,119 @@
+<div class="container">
+    <div class="row mt-5 mb-5">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://as2.ftcdn.net/v2/jpg/03/76/95/25/1000_F_376952510_niI6vzlJrCt0RrW7gHL62UTkjJQvcF7F.jpg"
+                    class="card-img-top" alt="Pão Recheado">
+                <div class="card-body">
+                    <h5 class="card-title ">Pão Recheado</h5>
+                    <p class="card-text">Fácil de fazer e muito saboroso. Recheio variado.</p>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="recepi">
+                <h3 class="text-center mb-4">Pão Recheado</h3>
+                <h5 class="mt-4 mb-4">Ingredientes Massa</h5>
+                <ul>
+                    <li> 1 1/2 pacotes de fermento seco para pão</li>
+                    <li> 1 xícara de leite morno</li>
+                    <li> 1/2 xícara de óleo</li>
+                    <li> 1/2 colher de sopa de sal</li>
+                    <li> 1 ovo</li>
+                    <li> 1 gema para pincelar a massa</li>
+                    <li> 2 colheres de sopa de açúcar</li>
+                    <li> 4 xícaras de farinha de trigo</li>
+                </ul>
+                <h5 class="mt-4 mb-4">Ingredientes Recheio</h5>
+                <ul>
+                    <li> 2 calabresas picadas</li>
+                    <li> 1 cebola picada</li>
+                    <li> 1/2 lata de molho de tomate</li>
+                    <li> Azeitonas</li>
+                    <li> Orégano</li>
+                    <li> Queijo parmesão ralado</li>
+                    <li> Sal à gosto</li>
+                </ul>
+
+
+                <br>
+                <h5>Obs:</h5>
+                <p> O recheio pode ser de qualquer tipo, basta ser úmido (possuir algum molho ou misturar com
+                    requeijão).</p>
+                <br>
+                <h5 class="mt-4 mb-10">Modo de Preparo do Recheio</h5>
+                <p>Frite as calabresas e a cebola, adicione o restante dos ingredientes e tempere à gosto. Reserve e
+                    espere esfriar.</p>
+
+                <h5 class="mt-4 mb-10">Modo da Massa</h5>
+                <p>Separe uma xícara de farinha. Misture as outras três xícaras de farinha aos outros ingredientes
+                    secos. Adicione o ovo, o óleo e misture. Vá adicionando lentamente o restante da farinha até dar o
+                    ponto na massa. Caso necessite, adicione mais farinha.<br /><br />
+
+                    Sove a massa por 10 minutos e deixe crescer por 40 minutos.<br /><br />
+
+                    Após o crescimento, divida a massa em 2. Abra a massa e na parte inferior faça uma franja. Coloque o
+                    recheio na parte de cima e desça enrolando a massa até chegar na franja. Pegando uma franja de cada
+                    vez, cruze-as por cima da massa fazendo um X.<br><br>
+
+                    Pincele a gema de ovo sobre o pão e adicione orégano ou parmesão ralado por cima.<br><br>
+
+                    Repita o mesmo procedimento para os dois pães e coloque-os numa forma untada.
+
+                    Deixe crescer por 30 minutos. Leve ao forno à 180 °C por 40 minutos.
+                </p>
+
+            </div>
+
+            <hr class="mt-5 mb-5">
+
+            <div>
+                <h3 class="text-center mb-4 ">Comentários:</h3>
+
+                <div class="form-group mb-4">
+                    <label for="nome" class="text-monospace">Nome:</label>
+                    <input type="text" id="nome" name="nome" class="form-control mt-4" placeholder="Digite seu nome"
+                        [(ngModel)]="post.name">
+
+                </div>
+                <div class="form-group">
+                    <label for="mensagem" class="text-monospace">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" cols="30" rows="4" class="form-control mt-4"
+                        placeholder="Digite sua mensagem" [(ngModel)]="post.message"></textarea>
+
+                </div>
+                <div class="d-flex justify-content-end mt-4">
+                    <button type="button" class="btn btn-outline-info w-25"
+                        (click)='cadastrarMessage()'>Publicar</button>
+                </div>
+
+            </div>
+
+            <hr class="mt-5 mb-5">
+
+            <h6 class="mt-5 text-monospace">Pesquisar comentário</h6>
+
+            <input type="text" [(ngModel)]="idBuscado" class="form-control mb-3 w-50">
+            <button class="btn btn-outline-warning" (click)="buscarIdPaoRecheado()">Pesquisar</button>
+            <ul *ngIf="posts != null" style="margin-top: 20px">
+                <h5>{{posts.name}}:</h5>
+                <p>{{posts.message}}</p>
+            </ul>
+
+            <div class="container" class="mt-5 mb-5">
+                <div class="card mb-4" *ngFor="let post of listPost">
+                    <div class="card-header">
+                        <h6 class="card-title">{{post.id}}. {{post.name}}</h6>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">{{post.message}}</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

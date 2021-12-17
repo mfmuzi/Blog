@@ -21,20 +21,20 @@ export class SaladarussaComponent implements OnInit {
     this.findPosts();
   }
   findPosts() {
-    this.postService.getPosts().subscribe((data: Post[]) => {
+    this.postService.getPostsSaladaRussa().subscribe((data: Post[]) => {
       this.listPost = data;
     })
   }
 
   cadastrarMessage(){
-    this.postService.postMessage(this.post).subscribe((data: Post) => {
+    this.postService.postMessageSaladaRussa(this.post).subscribe((data: Post) => {
       this.post = data;
-      location.assign('/paocaseiro');
+      location.assign('/saladarussa');
     })
   }
 
-  buscarId(){
-    this.postService.buscarId(this.idBuscado).subscribe(objetos => this.posts = objetos);
+  buscarIdSaladaRussa(){
+    this.postService.buscarIdSaladaRussa(this.idBuscado).subscribe(objetos => this.posts = objetos);
   }
 
 }

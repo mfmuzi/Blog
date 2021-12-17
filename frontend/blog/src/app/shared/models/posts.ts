@@ -1,4 +1,5 @@
 export interface Posts {
-    id: number;
-  nome: string;
+  id: number;
+  name: string;
+  message: string;
 }

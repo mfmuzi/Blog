@@ -17,6 +17,9 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { TortamorangoComponent } from './receitas/tortamorango/tortamorango.component';
 import { SaladarussaComponent } from './receitas/saladarussa/saladarussa.component';
+import { CremepalmitoComponent } from './receitas/cremepalmito/cremepalmito.component';
+import { SopalegumesComponent } from './receitas/sopalegumes/sopalegumes.component';
+import { PaorecheadoComponent } from './receitas/paorecheado/paorecheado.component';
 
 
 
@@ -32,8 +35,13 @@ import { SaladarussaComponent } from './receitas/saladarussa/saladarussa.compone
     PaocaseiroComponent,
     HeroSearchComponent,
     TortamorangoComponent,
-    SaladarussaComponent
-    
+    SaladarussaComponent,
+    CremepalmitoComponent,
+    SopalegumesComponent,
+    PaorecheadoComponent,
+    CremepalmitoComponent,
+    PaorecheadoComponent,
+    SopalegumesComponent    
     
   ],
   imports: [

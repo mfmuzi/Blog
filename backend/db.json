@@ -1,5 +1,5 @@
 {
-  "posts": [
+  "postsPaoCaseiro": [
     {
       "id": 1,
       "name": "Maria Fernanda",
@@ -24,6 +24,96 @@
       "id": 5,
       "name": "Ana",
       "message": "Pão fica super fofinho mesmo sem sovar a massa! Farei para vender na minha cidade!"
-    }    
+    }
+  ],
+  "postsTorta": [
+    
+    {
+      "name": "Luiza",
+      "message": "Qual o tamanho da assadeira?",
+      "id": 1
+    },
+    {
+      "name": "Adriana",
+      "message": "Pode fazer de chocolate?",
+      "id": 2
+    },
+    {
+      "name": "Paulo",
+      "message": "Quantas porções ela serve?",
+      "id": 3
+    }
+  ],
+  "postsSaladaRussa": [
+    
+    {
+      "name": "Murilo",
+      "message": "Receita muito boa mesmo! Super fácil de fazer!",
+      "id": 1
+    },
+    {
+      "name": "Rebecca",
+      "message": "Quanto tempo demora para gelar?? Pode fazer de um dia para o outro?",
+      "id": 2
+    },
+    {
+      "name": "Lílian",
+      "message": "Pode substituir o peito de peru por presunto??",
+      "id": 3
+    },
+    {
+      "name": "Érica",
+      "message": "Uma delícia!! E ainda por cima serve umas 10 pessoas!",
+      "id": 4
+    }
+  ],
+  "postsPaoRecheado": [
+    
+    {
+      "name": "Gabriela",
+      "message": "Nossa! Muito fácil de fazer mesmo! A massa chega no ponto rapidinho!",
+      "id": 1
+    },
+    {
+      "name": "Renata",
+      "message": "Fiz com recheio de presunto, queijo e requijão! Ficou muito boa também!!",
+      "id": 2
+    },
+    {
+      "name": "Ricardo",
+      "message": "Será que pode fazer em tamanhos menores? Seria um ótimo lanche para as crianças!",
+      "id": 3
+    }
+  ],
+  "postsSopaLegumes": [
+    
+    {
+      "name": "Natália",
+      "message": "Famoso sopão com tudo que tem na geladeira! Amei a receita!",
+      "id": 1
+    },
+    {
+      "name": "Vera",
+      "message": "Pode colocar outros tipos de verdura também? Cenoura, beterrava, etc?",
+      "id": 2
+    },
+    {
+      "name": "Bruno",
+      "message": "Será que fica bom com frango desfiado??",
+      "id": 3
+    }
+  ],
+  "postsCremePalmito": [
+    
+    {
+      "name": "Juliana",
+      "message": "Só vai isso mesmo?? Usar a água do palmito não faz mal?",
+      "id": 1
+    },
+    {
+      "name": "Izabela",
+      "message": "Pode bater no liquidificador?",
+      "id": 2
+    }
   ]
 }

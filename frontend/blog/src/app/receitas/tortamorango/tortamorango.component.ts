@@ -22,20 +22,20 @@ export class TortamorangoComponent implements OnInit {
     this.findPosts();
   }
   findPosts() {
-    this.postService.getPosts().subscribe((data: Post[]) => {
+    this.postService.getPostsTorta().subscribe((data: Post[]) => {
       this.listPost = data;
     })
   }
 
   cadastrarMessage(){
-    this.postService.postMessage(this.post).subscribe((data: Post) => {
+    this.postService.postMessageTorta(this.post).subscribe((data: Post) => {
       this.post = data;
-      location.assign('/paocaseiro');
+      location.assign('/tortamorango');
     })
   }
 
-  buscarId(){
-    this.postService.buscarId(this.idBuscado).subscribe(objetos => this.posts = objetos);
+  buscarIdTorta(){
+    this.postService.buscarIdTorta(this.idBuscado).subscribe(objetos => this.posts = objetos);
   }
 
 }

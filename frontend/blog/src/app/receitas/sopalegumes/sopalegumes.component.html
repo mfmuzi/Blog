@@ -1,0 +1,94 @@
+<div class="container">
+    <div class="row mt-5 mb-5">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://image.freepik.com/fotos-gratis/sopa-de-lentilha-com-ervas-picadas-e-bolachas_114579-3534.jpg"
+                    class="card-img-top" alt="Sopa de legumes">
+                <div class="card-body">
+                    <h5 class="card-title ">Sopa de Legumes</h5>
+                    <p class="card-text">Sopão prático e ótimo para dias frios.</p>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="recepi">
+                <h3 class="text-center mb-4">Sopa de Legumes</h3>
+                <h5 class="mt-4 mb-4">Ingredientes</h5>
+                <ul>
+                    <li> 1 abobrinha italiana</li>
+                    <li> 1 chuchu</li>
+                    <li> 1 punhado de vagem</li>
+                    <li> 2 cebolas</li>
+                    <li> 1/4 de repolho</li>
+                    <li> 1 molho de tomate de saquinho</li>
+                    <li> 1 creme de cebola</li>
+                    <li> 2 sachês de sazon de legumes</li>
+                    <li> sal à gosto</li>
+
+                </ul>
+                <h5 class="mt-4 mb-10">Modo de Preparo</h5>
+                <p>Corte as cebolas em pétalas e o restante dos ingredientes em cubos pequenos. Em uma panela de
+                    pressão, refogue a cebola, abobrinha, vagem e o chuchu. Em seguida, adicione o molho de tomate, o
+                    creme de cebola e o sazon. Adicione a água até cobrir todos os ingredientes e por cima coloque o
+                    repolho picado. <br /><br />
+
+                    A Feche a panela e deixe cozinhar na pressão por 30 minutos.
+                    Após o cozimento, acerte o sal.<br /><br />
+
+                <h5>Obs:</h5>
+                <p>Se preferir, adicione cubos de carne à receita.</p>
+
+            </div>
+
+            <hr class="mt-5 mb-5">
+
+            <div>
+                <h3 class="text-center mb-4 ">Comentários:</h3>
+
+                <div class="form-group mb-4">
+                    <label for="nome" class="text-monospace">Nome:</label>
+                    <input type="text" id="nome" name="nome" class="form-control mt-4" placeholder="Digite seu nome"
+                        [(ngModel)]="post.name">
+
+                </div>
+                <div class="form-group">
+                    <label for="mensagem" class="text-monospace">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" cols="30" rows="4" class="form-control mt-4"
+                        placeholder="Digite sua mensagem" [(ngModel)]="post.message"></textarea>
+
+                </div>
+                <div class="d-flex justify-content-end mt-4">
+                    <button type="button" class="btn btn-outline-info w-25"
+                        (click)='cadastrarMessage()'>Publicar</button>
+                </div>
+
+            </div>
+
+            <hr class="mt-5 mb-5">
+
+            <h6 class="mt-5 text-monospace">Pesquisar comentário</h6>
+
+            <input type="text" [(ngModel)]="idBuscado" class="form-control mb-3 w-50">
+            <button class="btn btn-outline-warning" (click)="buscarIdSopaLegumes()">Pesquisar</button>
+            <ul *ngIf="posts != null" style="margin-top: 20px">
+                <h5>{{posts.name}}:</h5>
+                <p>{{posts.message}}</p>
+            </ul>
+
+            <div class="container" class="mt-5 mb-5">
+                <div class="card mb-4" *ngFor="let post of listPost">
+                    <div class="card-header">
+                        <h6 class="card-title">{{post.id}}. {{post.name}}</h6>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">{{post.message}}</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
